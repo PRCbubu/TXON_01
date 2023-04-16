@@ -1,8 +1,8 @@
 package com.example.unitconterto;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -10,46 +10,66 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class currency_conversion extends AppCompatActivity implements AdapterView.OnItemSelectedListener
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
+public class currency_conversion extends AppCompatActivity
 {
+    private void toastMsg()
+    {
+        Toast.makeText(this, "You don't need to convert", Toast.LENGTH_SHORT).show();
+    }
+
+    private void displayResult(Double result)
+    {
+        TextView ans = (TextView) findViewById(R.id.AnswerCurrency);
+        ans.setText(String.format(Locale.getDefault(), ".2f", result));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.currency_conversion);
 
-        Spinner first = (Spinner) findViewById(R.id.currencyIn);
-        Spinner second = (Spinner) findViewById(R.id.currencyOut);
-        TextView secondLine = (TextView) findViewById(R.id.displayToCurrency);
-        EditText ans = (EditText) findViewById(R.id.CurrencyAmt);
-        TextView answerCurrency = (TextView) findViewById(R.id.AnswerCurrency);
+        Spinner currSpinner1 = (Spinner) findViewById(R.id.currencyIn);
+        Spinner currSpinner2 = (Spinner) findViewById(R.id.currencyOut);
 
-        ans.animate().alpha(0);
-        answerCurrency.animate().alpha(0);
+        EditText edit1 = (EditText) findViewById(R.id.CurrencyAmt);
 
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.CurrencyUnits, android.R.layout.simple_dropdown_item_1line);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.CurrencyUnits, android.R.layout.simple_dropdown_item_1line);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        first.setAdapter(adapter1);
-        second.setAdapter(adapter2);
+        if(edit1.getText().toString().length() == 0)
+            edit1.setText("0.0");
 
-        first.setOnItemSelectedListener(this);
-        second.setOnItemSelectedListener(this);
+        HashMap<String, Double> exchangeRate = new HashMap<>();
 
-    }
+        exchangeRate.put("USD", 1.0);
+        exchangeRate.put("INR", 81.85);
+        exchangeRate.put("EUR", 0.9);
+        exchangeRate.put("YEN", 133.78);
+        exchangeRate.put("GBP", 0.81);
+        exchangeRate.put("AUD", 1.49);
+        exchangeRate.put("CAD", 1.34);
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
-    {
-        Toast.makeText(this, ""+ adapterView.getItemIdAtPosition(i), Toast.LENGTH_SHORT).show();
-        /*if(adapterView.getItemAtPosition())
-            Toast.makeText(this, "You don't need to convert currency", Toast.LENGTH_SHORT).show();*/
-    }
+        double givenAmt = Double.parseDouble(edit1.getText().toString());
+        Log.i("info",Double.toString(givenAmt));
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView)
-    {
+        Button convert = (Button) findViewById(R.id.ConvertCurr);
 
+        convert.setOnClickListener(view ->
+        {
+            if(currSpinner1.getSelectedItem() == currSpinner2.getSelectedItem())
+                toastMsg();
+            else if (currSpinner1.getSelectedItem() == "USD")
+            {
+                for(Map.Entry<String, Double> exchanges : exchangeRate.entrySet())
+                {
+                    if(exchanges.getKey() == currSpinner2.getSelectedItem())
+                    {
+                        displayResult(givenAmt * exchanges.getValue());
+                        Log.i("info", ""+ givenAmt * exchanges.getValue());
+                    }
+                }
+            }
+        });
     }
 }
