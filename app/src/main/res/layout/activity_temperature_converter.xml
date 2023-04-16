@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="false"
-    android:background="#7594FB"
-    android:backgroundTintMode="screen">
+    android:background="#316501"
+    android:backgroundTintMode="add">
 
     <ImageView
-        android:id="@+id/currencyBG"
+        android:id="@+id/temperatureBG"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_200sdp"
         android:adjustViewBounds="true"
-        android:background="#7593FA"
+        android:background="#316501"
         android:backgroundTintMode="src_over"
         android:fadingEdge="vertical"
         android:scaleType="fitXY"
@@ -23,10 +23,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/currency" />
+        app:srcCompat="@drawable/temperature" />
 
     <TextView
-        android:id="@+id/BgCurrText"
+        android:id="@+id/BgTempText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="@dimen/_15sdp"
@@ -34,12 +34,13 @@
         android:alpha="1"
         android:backgroundTintMode="src_over"
         android:fontFamily="casual"
-        android:textColor="@color/black"
         android:tag="heading"
-        android:text="@string/currencyCon"
+        android:text="@string/temperatureCon"
+        android:textSize="@dimen/_25ssp"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,114 +50,112 @@
         app:layout_constraintVertical_bias="0.26" />
 
     <TextView
-        android:id="@+id/displayMyCurrency"
+        android:id="@+id/displayMyTemperature"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:text="@string/FirstTemp"
         android:textAlignment="center"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
-        android:text="@string/FirstCurr"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencyBG"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureBG"
         app:layout_constraintVertical_bias="0.02" />
 
     <Spinner
-        android:id="@+id/currencyIn"
+        android:id="@+id/temperatureIn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_250sdp"
-        android:entries="@array/CurrencyUnits"
+        android:entries="@array/TemperatureUnits"
         android:textAlignment="center"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayMyCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/displayMyTemperature"
         app:layout_constraintVertical_bias="0.12" />
 
 
     <TextView
-        android:id="@+id/displayToCurrency"
+        android:id="@+id/displayToTemperature"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
-        android:text="@string/secondtCurr"
+        android:text="@string/secondTemp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencyBG"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureBG"
         app:layout_constraintVertical_bias="0.25" />
 
     <Spinner
-        android:id="@+id/currencyOut"
+        android:id="@+id/temperatureOut"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_190sdp"
-
-        android:entries="@array/CurrencyUnits"
+        android:entries="@array/TemperatureUnits"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/displayToCurrency" />
+        app:layout_constraintTop_toBottomOf="@+id/displayToTemperature" />
 
     <EditText
-        android:id="@+id/CurrencyAmt"
+        android:id="@+id/TemperatureValue"
         android:layout_width="@dimen/_210sdp"
         android:layout_height="@dimen/_60sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_140sdp"
         android:ems="10"
-        android:textAlignment="center"
         android:hint="@string/CD_curr"
         android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencyOut" />
+        app:layout_constraintTop_toBottomOf="@+id/temperatureOut" />
 
     <TextView
-        android:id="@+id/AnswerCurrency"
+        android:id="@+id/AnswerTemperature"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="137dp"
-        android:hint="@string/thirdCurr"
+        android:hint="@string/thirdTemp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CurrencyAmt"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureValue"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/ConvertCurr"
+        android:id="@+id/ConvertTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="#229954"
         android:onClick="conversion"
         android:text="Convert"
-        android:backgroundTint="#000099"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerCurrency"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/AnswerTemperature"
         app:cardCornerRadius="@dimen/_20sdp"
         app:cardElevation="@dimen/_10sdp"/>
 

@@ -57,6 +57,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.050" />
 
+
+    <TextView
+        android:id="@+id/menuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_11sdp"
+        android:text="@string/menuName"
+        android:textSize="@dimen/_15sdp"
+        android:textAlignment="center"
+        android:background="#BBDEFB"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <GridView
         android:id="@+id/options"
         android:layout_width="@dimen/_250sdp"

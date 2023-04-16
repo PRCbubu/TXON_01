@@ -1,10 +1,72 @@
 <resources>
     <string name="app_name">UnitConterto</string>
     <string name="heading">Unit Conversion</string>
-    <string name="currencyCon">Currency Conversion</string>
+    <string name="menuName">Main Menu</string>
     <string name="backgroundImage">background</string>
 
+   <!--List of units for force conversion -->
+
+   <string name="FirstForce">Please enter your force value</string>
+   <string name="secondForce">Your force value you want</string>
+   <string name="thirdForce">Your force value is</string>
+   <string name="CD_Force">Please enter your value</string>
+
+   <string name="forceCon">Force Conversion</string>
+
+   <string-array name="ForceUnits">
+      <item>Dyne</item>
+      <item>Gram-force</item>
+      <item>Poundal</item>
+      <item>Pound-force</item>
+      <item>Kilogram-force</item>
+   </string-array>
+
+   <!--List of units for time conversion -->
+
+   <string name="FirstTime">Please enter your time value</string>
+   <string name="secondTime">Your time value you want</string>
+   <string name="thirdTime">Your time value is</string>
+   <string name="CD_Time">Please enter your value</string>
+
+   <string name="timeCon">Time Conversion</string>
+
+   <string-array name="TimeUnits">
+      <item>Millisecond</item>
+      <item>Decisecond</item>
+      <item>Centisecond</item>
+      <item>Seconds</item>
+      <item>Minutes</item>
+      <item>Hours</item>
+      <item>Days</item>
+   </string-array>
+
+   <!--List of units for distance conversion -->
+
+   <string name="FirstDist">Please enter your distance value</string>
+   <string name="secondDist">Your distance value you want</string>
+   <string name="thirdDist">Your distance value is</string>
+   <string name="CD_dist">Please enter your value</string>
+
+   <string name="distCon">Distance Conversion</string>
+
+   <string-array name="DistanceUnits">
+      <item>Millimeter</item>
+      <item>Decimeter</item>
+      <item>Centimeter</item>
+      <item>Meter</item>
+      <item>Dekameter</item>
+      <item>Hectometer</item>
+      <item>Kilometer</item>
+   </string-array>
+
     <!--List of units for temperature conversion -->
+
+   <string name="FirstTemp">Please enter your temperature value</string>
+   <string name="secondTemp">Your temperature value you want</string>
+   <string name="thirdTemp">Your temperature value is</string>
+   <string name="CD_temp">Please enter your value</string>
+
+   <string name="temperatureCon">Temperature Conversion</string>
 
     <string-array name="TemperatureUnits">
         <item>Kelvin</item>
@@ -16,7 +78,28 @@
         <item>Delis le</item>
     </string-array>
 
+   <!--List of units for mass conversion -->
+
+   <string name="FirstMass">Please enter your mass value</string>
+   <string name="secondMass">Your mass value you want</string>
+   <string name="thirdMass">Your mass value is</string>
+   <string name="CD_Mass">Please enter your value</string>
+
+   <string name="massCon">Mass Conversion</string>
+
+   <string-array name="MassUnits">
+      <item>Milligram</item>
+      <item>Decigram</item>
+      <item>Centigram</item>
+      <item>Gram</item>
+      <item>Dekagram</item>
+      <item>Hectogram</item>
+      <item>Kilogram</item>
+      <item>Tonne</item>
+   </string-array>
+
     <!--List of units for currency conversion -->
+   <string name="currencyCon">Currency Conversion</string>
     <string name="FirstCurr">Please enter your currency value</string>
     <string name="secondtCurr">Your currency value you want</string>
     <string name="thirdCurr">Your currency value is</string>

@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 
@@ -32,11 +34,11 @@ public class MainActivity extends AppCompatActivity
         ArrayList<MenuItems> menuItemsArrayList = new ArrayList<MenuItems>();
 
         menuItemsArrayList.add(new MenuItems("Temperature", R.drawable.thermometer));
-        menuItemsArrayList.add(new MenuItems("Mass", R.drawable.thermometer));
-        menuItemsArrayList.add(new MenuItems("Distance", R.drawable.thermometer));
-        menuItemsArrayList.add(new MenuItems("Time", R.drawable.thermometer));
+        menuItemsArrayList.add(new MenuItems("Mass", R.drawable.dumble));
+        menuItemsArrayList.add(new MenuItems("Distance", R.drawable.road));
+        menuItemsArrayList.add(new MenuItems("Time", R.drawable.clock));
         menuItemsArrayList.add(new MenuItems("Currency", R.drawable.money));
-        menuItemsArrayList.add(new MenuItems("Force", R.drawable.thermometer));
+        menuItemsArrayList.add(new MenuItems("Force", R.drawable.energy));
 
         AdapterClass adapter = new AdapterClass(this, menuItemsArrayList);
         menuItems.setAdapter(adapter);
@@ -46,9 +48,34 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
             {
-                if(menuItemsArrayList.get(i).getOptionName() == "Currency")
+                if(menuItemsArrayList.get(i).getOptionName() == "Temperature")
+                {
+                    Intent j = new Intent(getApplicationContext(), temperature_converter.class);
+                    startActivity(j);
+                }
+                else if(menuItemsArrayList.get(i).getOptionName() == "Mass")
+                {
+                    Intent j = new Intent(getApplicationContext(), mass_converter.class);
+                    startActivity(j);
+                }
+                else if(menuItemsArrayList.get(i).getOptionName() == "Distance")
+                {
+                    Intent j = new Intent(getApplicationContext(), distance_converter.class);
+                    startActivity(j);
+                }
+                else if(menuItemsArrayList.get(i).getOptionName() == "Time")
+                {
+                    Intent j = new Intent(getApplicationContext(), time_converter.class);
+                    startActivity(j);
+                }
+                else if(menuItemsArrayList.get(i).getOptionName() == "Currency")
                 {
                     Intent j = new Intent(getApplicationContext(), currency_conversion.class);
+                    startActivity(j);
+                }
+                else if(menuItemsArrayList.get(i).getOptionName() == "Force")
+                {
+                    Intent j = new Intent(getApplicationContext(), force_converter.class);
                     startActivity(j);
                 }
             }
