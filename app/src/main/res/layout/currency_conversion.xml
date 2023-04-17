@@ -101,7 +101,6 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_190sdp"
-
         android:entries="@array/CurrencyUnits"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -149,8 +148,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:onClick="conversion"
         android:text="Convert"
+        android:textColor="@color/white"
         android:backgroundTint="#000099"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

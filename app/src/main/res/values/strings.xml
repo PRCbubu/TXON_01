@@ -69,6 +69,7 @@
    <string name="temperatureCon">Temperature Conversion</string>
 
     <string-array name="TemperatureUnits">
+        <item>Celsius</item>
         <item>Kelvin</item>
         <item>Fahrenheit</item>
         <item>Rankine</item>
