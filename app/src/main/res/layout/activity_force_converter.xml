@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/displayToForce" />
 
     <EditText
-        android:id="@+id/ForceAmt"
+        android:id="@+id/ForceValue"
         android:layout_width="@dimen/_210sdp"
         android:layout_height="@dimen/_60sdp"
         android:layout_marginTop="@dimen/_10sdp"

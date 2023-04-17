@@ -14,11 +14,13 @@
    <string name="forceCon">Force Conversion</string>
 
    <string-array name="ForceUnits">
-      <item>Dyne</item>
-      <item>Gram-force</item>
-      <item>Poundal</item>
-      <item>Pound-force</item>
-      <item>Kilogram-force</item>
+       <item>Newton</item>
+       <item>Dyne</item>
+       <item>Gram-force</item>
+       <item>Poundal</item>
+       <item>Pound-force</item>
+       <item>Kilogram-force</item>
+       <item>joule/centimeter</item>
    </string-array>
 
    <!--List of units for time conversion -->
@@ -32,8 +34,6 @@
 
    <string-array name="TimeUnits">
       <item>Millisecond</item>
-      <item>Decisecond</item>
-      <item>Centisecond</item>
       <item>Seconds</item>
       <item>Minutes</item>
       <item>Hours</item>
@@ -50,13 +50,15 @@
    <string name="distCon">Distance Conversion</string>
 
    <string-array name="DistanceUnits">
-      <item>Millimeter</item>
-      <item>Decimeter</item>
-      <item>Centimeter</item>
-      <item>Meter</item>
-      <item>Dekameter</item>
-      <item>Hectometer</item>
-      <item>Kilometer</item>
+       <item>Millimeter</item>
+       <item>Decimeter</item>
+       <item>Centimeter</item>
+       <item>Meter</item>
+       <item>Dekameter</item>
+       <item>Hectometer</item>
+       <item>Kilometer</item>
+       <item>Feet</item>
+       <item>Inch</item>
    </string-array>
 
     <!--List of units for temperature conversion -->
@@ -105,7 +107,7 @@
     <string name="secondtCurr">Your currency value you want</string>
     <string name="thirdCurr">Your currency value is</string>
 
-   <string name="CD_curr">Please enter your ammount</string>
+   <string name="CD_curr">Please enter your amount</string>
 
     <string-array name="CurrencyUnits">
        <item>USD</item>
