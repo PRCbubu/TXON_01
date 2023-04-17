@@ -52,6 +52,7 @@
         android:id="@+id/displayMyForce"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:background="#C9002D2E"
         android:text="@string/FirstForce"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -83,9 +84,10 @@
         android:id="@+id/displayToForce"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:background="#C9002D2E"
         android:text="@string/secondForce"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -131,6 +133,7 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="137dp"
+        android:background="#0FCDBB"
         android:hint="@string/thirdForce"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -140,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ForceAmt"
+        app:layout_constraintTop_toBottomOf="@+id/ForceValue"
         app:layout_constraintVertical_bias="0.5" />
 
     <Button

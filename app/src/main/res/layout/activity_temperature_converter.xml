@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="false"
     android:background="#316501"
-    android:backgroundTintMode="add">
+    android:backgroundTintMode="src_in">
 
     <ImageView
         android:id="@+id/temperatureBG"
@@ -36,11 +36,11 @@
         android:fontFamily="casual"
         android:tag="heading"
         android:text="@string/temperatureCon"
-        android:textSize="@dimen/_25ssp"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/white"
+        android:textSize="@dimen/_25ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,6 +53,7 @@
         android:id="@+id/displayMyTemperature"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:background="#152E16"
         android:text="@string/FirstTemp"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -70,6 +71,8 @@
         android:layout_height="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_250sdp"
+        android:dropDownWidth="wrap_content"
+        android:elevation="@dimen/_10sdp"
         android:entries="@array/TemperatureUnits"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +86,7 @@
         android:id="@+id/displayToTemperature"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_20sdp"
+        android:background="#152E16"
         android:text="@string/secondTemp"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -118,8 +122,8 @@
         android:ems="10"
         android:hint="@string/CD_curr"
         android:inputType="numberDecimal"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,6 +135,7 @@
         android:layout_height="@dimen/_20sdp"
         android:layout_marginTop="31dp"
         android:layout_marginBottom="137dp"
+        android:background="#5C9E20"
         android:hint="@string/thirdTemp"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -149,14 +154,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:backgroundTint="#229954"
+        android:backgroundTint="#428504"
         android:onClick="conversion"
         android:text="Convert"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_10sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AnswerTemperature"
-        app:cardCornerRadius="@dimen/_20sdp"
-        app:cardElevation="@dimen/_10sdp"/>
+        app:layout_constraintTop_toBottomOf="@+id/AnswerTemperature" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
