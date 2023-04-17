@@ -33,11 +33,11 @@ public class time_converter extends AppCompatActivity
     {
         HashMap<String, Double> timeRate = new HashMap<>();
 
-        timeRate.put("Millisecond", 1/1000.00);
+        timeRate.put("Millisecond", 1000.00);
         timeRate.put("Seconds", 1.00);
-        timeRate.put("Minutes", 60.00);
-        timeRate.put("Hours", 60*60.00);
-        timeRate.put("Days", 24*60*60.00);
+        timeRate.put("Minutes", 1/60.00);
+        timeRate.put("Hours", 1/3600.00);
+        timeRate.put("Days", 1/86400.00);
 
         Double ans;
 
@@ -51,7 +51,7 @@ public class time_converter extends AppCompatActivity
         {
             if(exchanges.getKey().equals(units))
             {
-                ans = value / exchanges.getValue();
+                ans = value * exchanges.getValue();
                 return ans;
             }
         }
